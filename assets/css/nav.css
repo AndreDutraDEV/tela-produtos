@@ -1,0 +1,139 @@
+header {
+  width: 100vw;
+  padding: 0 var(--spacing-page);
+  height: var(--header-size-nohome);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  background-color: var(--header-nrm-color);
+  box-shadow: 0 0px 20px 2px rgb(197, 195, 195);
+}
+
+.nav-bar {
+  width: 100%;
+  height: 100%;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-nav {
+  width: var(--logo-nav-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-nav {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+
+.menu_nav-desktop {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.menu-itens {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.links-menu {
+  position: relative;
+  padding: 8px 4px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.links-menu::before {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0px;
+  height: 4px;
+  background-color: var(--acent-color);
+  transition: 0.4s;
+}
+
+.menu-itens:hover .links-menu::before {
+  width: 100%;
+}
+
+.buttons-header {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-login {
+  height: 38px;
+  padding: 6px 30px;
+  border: 2px solid var(--acent-color);
+  background-color: transparent;
+  border-radius: 4px;
+  color: var(--acent-color);
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  transition: 0.4s;
+}
+
+.btn-login::before {
+  content: "";
+  height: 100%;
+  width: 0px;
+  background-color: var(--acent-color);
+  position: absolute;
+  left: 0;
+  transition: 0.4s;
+  z-index: -1;
+}
+
+.buttons-header:hover .btn-login::before,
+.buttons-header:hover .btn-login {
+  width: 100%;
+  color: #fff;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 830px) {
+  .main-nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #000;
+  }
+}

@@ -1,0 +1,50 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: var(--header-size-nohome) 0 0 0;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: var(--font-page);
+  background-color: var(--background-page);
+  scroll-behavior: smooth;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-link-nav);
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  outline: none;
+  background-color: none;
+  border: none;
+  box-shadow: none;
+}
+
+a.atual-page::before {
+  width: 100%;
+}
+
+.container {
+  padding: 0 var(--spacing-page);
+}
+
+input:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
